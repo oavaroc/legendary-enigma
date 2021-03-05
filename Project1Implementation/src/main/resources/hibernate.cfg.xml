@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- set up connection info -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://revprojecttraining.cs2jvpoqkrnr.us-east-2.rds.amazonaws.com:5432/postgres?currentSchema=trms</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">mypassword</property>
+		
+		<!-- hibernate setup -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="use_sql_comments">true</property>
+		
+		<!-- tell hibernate where to find our mappings -->
+		<mapping class="com.trms.models.Departments"></mapping>
+		<mapping class="com.trms.models.Employee"></mapping>
+		<mapping class="com.trms.models.EventType"></mapping>
+		<mapping class="com.trms.models.GradingFormat"></mapping>
+		<mapping class="com.trms.models.Message"></mapping>
+		<mapping class="com.trms.models.Reimbursement"></mapping>
+	</session-factory>
+</hibernate-configuration>
